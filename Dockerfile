@@ -33,7 +33,6 @@ RUN echo headless | sudo -S -k apt-get update \
 	&& echo headless | sudo -S -k dpkg -i /tmp/*.deb \
 	&& echo headless | sudo -S -k rm -rf /tmp/*.deb \
 	&& echo headless | sudo -S -k rm -rf /var/lib/apt/lists/* \
-
-RUN obs &
 	
 VOLUME ["/config"]
+CMD ["obs", "&"]
