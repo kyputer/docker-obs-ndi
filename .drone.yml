@@ -2,10 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-- name: docker  
+- name: docker
   image: plugins/docker
   settings:
-    repo: patrickstigler/obs-ndi
+    repo: kst123/obs-ndi
     username:
       from_secret: docker_username
     password:
